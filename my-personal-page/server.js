@@ -6,6 +6,9 @@ const port = 3000;
 const server = http.createServer((req, res) => {
   res.statusCode = 200;
   res.setHeader('Content-Type', 'text/plain');
+  if(req.url === '/mail/process'){
+  	res.end('Mail process path\n');
+  }
   res.end('Hello World\n');
 });
 
